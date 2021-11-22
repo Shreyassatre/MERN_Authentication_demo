@@ -1,0 +1,188 @@
+/* Nav Bar */
+.nav {
+    height: 50px;
+    width: 98.5vw;
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 1px 0px 5px gray;
+    padding: 10px;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+    float: left;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(72, 77, 211);
+    padding: 10px 10px 10px 10px;
+    margin-right: auto;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(72, 77, 211);
+  }
+
+  .nav > .nav-links > .active {
+    background-color: rgb(72, 77, 211);
+    color: rgb(255, 255, 255);
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+  }
+
+  .nav > #nav-check {
+    display: none;
+  }
+
+  .log_out_btn:hover{
+    cursor: pointer;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid rgb(0, 0, 0);
+    }
+    .nav > .nav-links {
+      margin-top: 20px;
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+      background-color: rgb(255, 255, 255);
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+
+  /* Login Form */
+
+  .login-block {
+    width: 320px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid rgb(72, 77, 211);
+    margin: 5rem auto 0 auto;
+}
+
+.login-block h1 {
+    text-align: left;
+    color: rgb(72, 77, 211);
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.login-block small {
+    text-align: left;
+    float: left;
+    margin: 0 0 20px 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.login-block .forgot_pass {
+    float: right;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.login-block p {
+    text-align: center;
+    font-size: 15px;
+}
+
+.login-block p span a{
+    text-decoration: none;
+}
+
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 10px;
+    outline: none;
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    background: rgb(72, 77, 211);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e15960;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.warning{
+  color:red;
+  font-size: 12px;
+}
+
+::placeholder {
+    font-weight: bold;
+  }
+
