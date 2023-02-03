@@ -99,27 +99,6 @@ function Signin() {
 
     return (
         <div>
-            <div className="nav">
-                <input type="checkbox" id="nav-check"/>
-                <div className="nav-header">
-                    <div className="nav-title">
-                    AuthSys
-                    </div>
-                </div>
-                <div className="nav-btn">
-                    <label for="nav-check">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </label>
-                </div>
-                
-                <div className="nav-links">
-                    <a href="#1">Products</a>
-                    <a href="#2">Pricing</a>
-                    <a href="#3" className="active">Request Demo</a>
-                </div>
-            </div>
 
             <form onSubmit={login}>
                 <div className="login-block">

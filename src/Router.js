@@ -12,17 +12,38 @@ function Router() {
     return (
         <div>
             <BrowserRouter>
-                <Switch>
-                    <Route exact path="/">
-                        <Signin/>
-                    </Route>
-                    <Route exact path="/signup">
-                        <Signup/>
-                    </Route>
-                
-                    <Route exact path="/home">
-                        <Home/>
-                    </Route>
+                <Switch>                    
+                    {
+                        loggedIn == false && (
+                            <>
+                                <Route exact path="/">
+                                    <Signin/>
+                                </Route>
+                                <Route exact path="/signup">
+                                    <Signup/>
+                                </Route>
+                                <Route exact path="/home">
+                                    <center><h1>Unauthorized Aceess!</h1></center>
+                                </Route>
+                            </>
+                        )
+                    }
+                    {
+                        loggedIn == true && (
+                            <>
+                                <Route exact path="/">
+                                    <center><h1>Alrady LoggedIn!</h1></center>
+                                </Route>
+                                <Route exact path="/signup">
+                                    <center><h1>Logout to create new account!</h1></center>
+                                </Route>
+                                <Route exact path="/home">
+                                    <Home/>
+                                </Route>
+                            </>
+                        )
+                    }
+                    
                 </Switch>
             </BrowserRouter>
         </div>
